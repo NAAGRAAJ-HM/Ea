@@ -2,6 +2,6 @@
 
 class_Ea Ea;
 
-void class_Ea::InitFunction(void){
+FUNC(void, EA_CODE) class_Ea::InitFunction(void){
 }
 
