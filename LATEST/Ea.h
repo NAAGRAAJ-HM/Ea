@@ -26,7 +26,6 @@ class class_Ea{
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-      FUNC(void, EA_CODE) InitFunction           (void);
       FUNC(void, EA_CODE) SetMode                (void);
       FUNC(void, EA_CODE) Read                   (void);
       FUNC(void, EA_CODE) Write                  (void);
