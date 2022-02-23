@@ -1,6 +1,6 @@
 #pragma once
 /*****************************************************/
-/* File   : Ea.h                                     */
+/* File   : Ea_Unused.h                              */
 /* Author : Naagraaj HM                              */
 /*****************************************************/
 
@@ -21,7 +21,7 @@
 /*****************************************************/
 /* TYPEDEFS                                          */
 /*****************************************************/
-class class_Ea{
+class class_Ea_Unused{
    public:
 /*****************************************************/
 /* FUNCTIONS                                         */
@@ -37,7 +37,6 @@ class class_Ea{
       FUNC(void, EA_CODE) EraseImmediateBlock    (void);
       FUNC(void, EA_CODE) CbJobEndNotification   (void);
       FUNC(void, EA_CODE) CbJobErrorNotification (void);
-      FUNC(void, EA_CODE) MainFunction           (void);
 };
 
 /*****************************************************/
@@ -51,7 +50,7 @@ class class_Ea{
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-extern class_Ea Ea;
+//extern class_Ea Ea;
 
 /*****************************************************/
 /* EOF                                               */

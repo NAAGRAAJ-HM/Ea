@@ -1,6 +1,6 @@
 #pragma once
 /*****************************************************/
-/* File   : Ea_EcuM.h                             */
+/* File   : Ea_EcuM.h                                */
 /* Author : Naagraaj HM                              */
 /*****************************************************/
 
@@ -22,12 +22,13 @@
 /*****************************************************/
 /* TYPEDEFS                                          */
 /*****************************************************/
-class class_Ea_EcuM : public class_EcuM_Client{
+class interface_Ea_EcuM : public interface_EcuM_Client{
    public:
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-      FUNC(void, EA_CODE) InitFunction(void);
+      FUNC(void, EA_CODE) InitFunction   (void);
+      FUNC(void, EA_CODE) DeInitFunction (void);
 };
 
 /*****************************************************/
@@ -41,7 +42,7 @@ class class_Ea_EcuM : public class_EcuM_Client{
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-extern class_EcuM_Client *EcuM_Client_ptr_Ea;
+extern interface_Ea_EcuM *EcuM_Client_ptr_Ea;
 
 /*****************************************************/
 /* EOF                                               */
