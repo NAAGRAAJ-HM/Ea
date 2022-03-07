@@ -24,8 +24,6 @@
 /*****************************************************/
 class module_Ea:
       public abstract_module
-   ,  public interface_Ea_EcuM
-   ,  public interface_Ea_SchM
 {
    public:
       FUNC(void, EA_CODE) InitFunction   (void);
@@ -44,10 +42,9 @@ class module_Ea:
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-module_Ea Ea;
-
-interface_Ea_EcuM *EcuM_Client_ptr_Ea = &Ea;
-interface_Ea_SchM *SchM_Client_ptr_Ea = &Ea;
+module_Ea      Ea;
+infEcuMClient* gptrinfEcuMClient_Ea = &Ea;
+infSchMClient* gptrinfSchMClient_Ea = &Ea;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
