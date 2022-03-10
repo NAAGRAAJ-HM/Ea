@@ -7,8 +7,8 @@
 /* #INCLUDES                                         */
 /*****************************************************/
 #include "module.h"
-#include "Ea_EcuM.h"
-#include "Ea_SchM.h"
+#include "infEa_EcuM.h"
+#include "infEa_SchM.h"
 #include "Ea_Unused.h"
 
 /*****************************************************/
@@ -28,6 +28,7 @@ class module_Ea:
    public:
       FUNC(void, EA_CODE) InitFunction   (void);
       FUNC(void, EA_CODE) DeInitFunction (void);
+      FUNC(void, EA_CODE) GetVersionInfo (void);
       FUNC(void, EA_CODE) MainFunction   (void);
 };
 
@@ -44,6 +45,7 @@ class module_Ea:
 /*****************************************************/
 module_Ea      Ea;
 infEcuMClient* gptrinfEcuMClient_Ea = &Ea;
+infDcmClient*  gptrinfDcmClient_Ea  = &Ea;
 infSchMClient* gptrinfSchMClient_Ea = &Ea;
 
 /*****************************************************/
@@ -53,6 +55,9 @@ FUNC(void, EA_CODE) module_Ea::InitFunction(void){
 }
 
 FUNC(void, EA_CODE) module_Ea::DeInitFunction(void){
+}
+
+FUNC(void, EA_CODE) module_Ea::GetVersionInfo(void){
 }
 
 FUNC(void, EA_CODE) module_Ea::MainFunction(void){
