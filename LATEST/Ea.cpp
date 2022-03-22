@@ -7,7 +7,7 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "module.h"
-#include "infEa_Version.h"
+#include "Ea_Cfg.h"
 #include "infEa_EcuM.h"
 #include "infEa_Dcm.h"
 #include "infEa_SchM.h"
@@ -15,10 +15,19 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
+#define EA_AR_RELEASE_MAJOR_VERSION                                            4
+#define EA_AR_RELEASE_MINOR_VERSION                                            3
 
 /******************************************************************************/
 /* MACROS                                                                     */
 /******************************************************************************/
+#if(EA_AR_RELEASE_MAJOR_VERSION != STD_AR_RELEASE_MAJOR_VERSION)
+   #error "Incompatible EA_AR_RELEASE_MAJOR_VERSION!"
+#endif
+
+#if(EA_AR_RELEASE_MINOR_VERSION != STD_AR_RELEASE_MINOR_VERSION)
+   #error "Incompatible EA_AR_RELEASE_MINOR_VERSION!"
+#endif
 
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
@@ -61,6 +70,11 @@ FUNC(void, EA_CODE) module_Ea::DeInitFunction(void){
 }
 
 FUNC(void, EA_CODE) module_Ea::GetVersionInfo(void){
+#if(STD_ON == Ea_DevErrorDetect)
+//TBD: API parameter check
+   Det_ReportError(
+   );
+#endif
 }
 
 FUNC(void, EA_CODE) module_Ea::MainFunction(void){
