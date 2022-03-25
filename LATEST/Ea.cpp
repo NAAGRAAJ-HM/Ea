@@ -6,11 +6,11 @@
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
-#include "module.h"
-#include "CfgEa.h"
-#include "infEa_EcuM.h"
-#include "infEa_Dcm.h"
-#include "infEa_SchM.h"
+#include "module.hpp"
+#include "CfgEa.hpp"
+#include "infEa_EcuM.hpp"
+#include "infEa_Dcm.hpp"
+#include "infEa_SchM.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -90,7 +90,7 @@ FUNC(void, EA_CODE) module_Ea::GetVersionInfo(void){
 FUNC(void, EA_CODE) module_Ea::MainFunction(void){
 }
 
-#include "Ea_Unused.h"
+#include "Ea_Unused.hpp"
 
 FUNC(void, EA_CODE) class_Ea_Unused::SetMode(void){
 }
