@@ -90,7 +90,20 @@ FUNC(void, EA_CODE) module_Ea::GetVersionInfo(void){
 FUNC(void, EA_CODE) module_Ea::MainFunction(void){
 }
 
-#include "Ea_Unused.hpp"
+class class_Ea_Unused{
+   public:
+      FUNC(void, EA_CODE) SetMode                (void);
+      FUNC(void, EA_CODE) Read                   (void);
+      FUNC(void, EA_CODE) Write                  (void);
+      FUNC(void, EA_CODE) Cancel                 (void);
+      FUNC(void, EA_CODE) GetStatus              (void);
+      FUNC(void, EA_CODE) GetJobResult           (void);
+      FUNC(void, EA_CODE) InvalidateBlock        (void);
+      FUNC(void, EA_CODE) GetVersionInfo         (void);
+      FUNC(void, EA_CODE) EraseImmediateBlock    (void);
+      FUNC(void, EA_CODE) CbJobEndNotification   (void);
+      FUNC(void, EA_CODE) CbJobErrorNotification (void);
+};
 
 FUNC(void, EA_CODE) class_Ea_Unused::SetMode(void){
 }
