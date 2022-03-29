@@ -7,7 +7,6 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "module.hpp"
-#include "CfgEa.hpp"
 #include "infEa_EcuM.hpp"
 #include "infEa_Dcm.hpp"
 #include "infEa_SchM.hpp"
@@ -36,37 +35,40 @@ class module_Ea:
       public abstract_module
 {
    public:
+      module_Ea(Std_TypeVersionInfo lVersionInfo) : abstract_module(lVersionInfo){
+      }
       FUNC(void, EA_CODE) InitFunction   (void);
       FUNC(void, EA_CODE) DeInitFunction (void);
-      FUNC(void, EA_CODE) GetVersionInfo (void);
       FUNC(void, EA_CODE) MainFunction   (void);
-
-   private:
-      CONST(Std_TypeVersionInfo, EA_CONST) VersionInfo = {
-            0x0000
-         ,  0xFFFF
-         ,  0x01
-         ,  '0'
-         ,  '1'
-         ,  '0'
-      };
 };
+
+extern VAR(module_Ea, EA_VAR) Ea;
 
 /******************************************************************************/
 /* CONSTS                                                                     */
 /******************************************************************************/
+CONSTP2VAR(infEcuMClient, EA_VAR, EA_CONST) gptrinfEcuMClient_Ea = &Ea;
+CONSTP2VAR(infDcmClient,  EA_VAR, EA_CONST) gptrinfDcmClient_Ea  = &Ea;
+CONSTP2VAR(infSchMClient, EA_VAR, EA_CONST) gptrinfSchMClient_Ea = &Ea;
 
 /******************************************************************************/
 /* PARAMS                                                                     */
 /******************************************************************************/
+#include "CfgEa.hpp"
 
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-VAR(module_Ea, EA_VAR) Ea;
-CONSTP2VAR(infEcuMClient, EA_VAR, EA_CONST) gptrinfEcuMClient_Ea = &Ea;
-CONSTP2VAR(infDcmClient,  EA_VAR, EA_CONST) gptrinfDcmClient_Ea  = &Ea;
-CONSTP2VAR(infSchMClient, EA_VAR, EA_CONST) gptrinfSchMClient_Ea = &Ea;
+VAR(module_Ea, EA_VAR) Ea(
+   {
+         0x0000
+      ,  0xFFFF
+      ,  0x01
+      ,  '0'
+      ,  '1'
+      ,  '0'
+   }
+);
 
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
@@ -77,14 +79,6 @@ FUNC(void, EA_CODE) module_Ea::InitFunction(void){
 
 FUNC(void, EA_CODE) module_Ea::DeInitFunction(void){
    Ea.IsInitDone = E_NOT_OK;
-}
-
-FUNC(void, EA_CODE) module_Ea::GetVersionInfo(void){
-#if(STD_ON == Ea_DevErrorDetect)
-//TBD: API parameter check
-   Det_ReportError(
-   );
-#endif
 }
 
 FUNC(void, EA_CODE) module_Ea::MainFunction(void){
