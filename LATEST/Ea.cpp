@@ -6,7 +6,7 @@
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
-#include "module.hpp"
+#include "Module.hpp"
 #include "infEa_EcuM.hpp"
 #include "infEa_Dcm.hpp"
 #include "infEa_SchM.hpp"
@@ -37,6 +37,9 @@ class module_Ea:
    public:
       module_Ea(Std_TypeVersionInfo lVersionInfo) : abstract_module(lVersionInfo){
       }
+      FUNC(void, _CODE) InitFunction(
+         CONSTP2CONST(CfgModule_TypeAbstract, _CONFIG_DATA, _APPL_CONST) lptrCfgModule
+      );
       FUNC(void, EA_CODE) InitFunction   (void);
       FUNC(void, EA_CODE) DeInitFunction (void);
       FUNC(void, EA_CODE) MainFunction   (void);
@@ -73,7 +76,19 @@ VAR(module_Ea, EA_VAR) Ea(
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
-FUNC(void, EA_CODE) module_Ea::InitFunction(void){
+FUNC(void, EA_CODE) module_Ea::InitFunction(
+   CONSTP2CONST(CfgEa_Type, CFGEA_CONFIG_DATA, CFGEA_APPL_CONST) lptrCfgEa
+){
+   if(NULL_PTR == lptrCfgEa){
+#if(STD_ON == Ea_DevErrorDetect)
+      Det_ReportError(
+      );
+#endif
+   }
+   else{
+// check lptrCfgEa for memory faults
+// use PBcfg_Ea as back-up configuration
+   }
    Ea.IsInitDone = E_OK;
 }
 
