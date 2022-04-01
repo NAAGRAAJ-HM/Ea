@@ -78,6 +78,7 @@ VAR(module_Ea, EA_VAR) Ea(
 FUNC(void, EA_CODE) module_Ea::InitFunction(
    CONSTP2CONST(CfgModule_TypeAbstract, EA_CONFIG_DATA, EA_APPL_CONST) lptrCfgModule
 ){
+#if(STD_ON == Ea_InitCheck)
    if(E_OK == IsInitDone){
 #if(STD_ON == Ea_DevErrorDetect)
       Det_ReportError(
@@ -85,6 +86,7 @@ FUNC(void, EA_CODE) module_Ea::InitFunction(
 #endif
    }
    else{
+#endif
       if(NULL_PTR == lptrCfgModule){
 #if(STD_ON == Ea_DevErrorDetect)
          Det_ReportError(
@@ -96,10 +98,13 @@ FUNC(void, EA_CODE) module_Ea::InitFunction(
 // use PBcfg_Ea as back-up configuration
       }
       IsInitDone = E_OK;
+#if(STD_ON == Ea_InitCheck)
    }
+#endif
 }
 
 FUNC(void, EA_CODE) module_Ea::DeInitFunction(void){
+#if(STD_ON == Ea_InitCheck)
    if(E_OK != IsInitDone){
 #if(STD_ON == Ea_DevErrorDetect)
       Det_ReportError(
@@ -107,11 +112,26 @@ FUNC(void, EA_CODE) module_Ea::DeInitFunction(void){
 #endif
    }
    else{
+#endif
       IsInitDone = E_NOT_OK;
+#if(STD_ON == Ea_InitCheck)
    }
+#endif
 }
 
 FUNC(void, EA_CODE) module_Ea::MainFunction(void){
+#if(STD_ON == Ea_InitCheck)
+   if(E_OK != IsInitDone){
+#if(STD_ON == Ea_DevErrorDetect)
+      Det_ReportError(
+      );
+#endif
+   }
+   else{
+#endif
+#if(STD_ON == Ea_InitCheck)
+   }
+#endif
 }
 
 class class_Ea_Unused{
