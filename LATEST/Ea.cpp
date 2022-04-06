@@ -14,18 +14,18 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define EA_AR_RELEASE_MAJOR_VERSION                                            4
-#define EA_AR_RELEASE_MINOR_VERSION                                            3
+#define EA_AR_RELEASE_VERSION_MAJOR                                            4
+#define EA_AR_RELEASE_VERSION_MINOR                                            3
 
 /******************************************************************************/
 /* MACROS                                                                     */
 /******************************************************************************/
-#if(EA_AR_RELEASE_MAJOR_VERSION != STD_AR_RELEASE_MAJOR_VERSION)
-   #error "Incompatible EA_AR_RELEASE_MAJOR_VERSION!"
+#if(EA_AR_RELEASE_VERSION_MAJOR != STD_AR_RELEASE_VERSION_MAJOR)
+   #error "Incompatible EA_AR_RELEASE_VERSION_MAJOR!"
 #endif
 
-#if(EA_AR_RELEASE_MINOR_VERSION != STD_AR_RELEASE_MINOR_VERSION)
-   #error "Incompatible EA_AR_RELEASE_MINOR_VERSION!"
+#if(EA_AR_RELEASE_VERSION_MINOR != STD_AR_RELEASE_VERSION_MINOR)
+   #error "Incompatible EA_AR_RELEASE_VERSION_MINOR!"
 #endif
 
 /******************************************************************************/
@@ -63,8 +63,10 @@ CONSTP2VAR(infSchMClient, EA_VAR, EA_CONST) gptrinfSchMClient_Ea = &Ea;
 /******************************************************************************/
 VAR(module_Ea, EA_VAR) Ea(
    {
-         0x0000
-      ,  0xFFFF
+         EA_AR_RELEASE_VERSION_MAJOR
+      ,  EA_AR_RELEASE_VERSION_MINOR
+      ,  0x00
+      ,  0xFF
       ,  0x01
       ,  '0'
       ,  '1'
