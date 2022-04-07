@@ -102,7 +102,7 @@ FUNC(void, EA_CODE) module_Ea::InitFunction(
          }
          else{
 // use PBcfg_CanIf as back-up configuration
-            lptrCfg = PBcfg_CanIf;
+            lptrCfg = &PBcfgEa;
          }
       }
       IsInitDone = E_OK;
