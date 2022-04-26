@@ -31,8 +31,24 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
+class class_Ea_Functionality{
+   public:
+      FUNC(void, EA_CODE) SetMode                (void);
+      FUNC(void, EA_CODE) Read                   (void);
+      FUNC(void, EA_CODE) Write                  (void);
+      FUNC(void, EA_CODE) Cancel                 (void);
+      FUNC(void, EA_CODE) GetStatus              (void);
+      FUNC(void, EA_CODE) GetJobResult           (void);
+      FUNC(void, EA_CODE) InvalidateBlock        (void);
+      FUNC(void, EA_CODE) GetVersionInfo         (void);
+      FUNC(void, EA_CODE) EraseImmediateBlock    (void);
+      FUNC(void, EA_CODE) CbJobEndNotification   (void);
+      FUNC(void, EA_CODE) CbJobErrorNotification (void);
+};
+
 class module_Ea:
       public abstract_module
+   ,  public class_Ea_Functionality
 {
    public:
       module_Ea(Std_TypeVersionInfo lVersionInfo) : abstract_module(lVersionInfo){
@@ -84,6 +100,10 @@ FUNC(void, EA_CODE) module_Ea::InitFunction(
    if(E_OK == IsInitDone){
 #if(STD_ON == Ea_DevErrorDetect)
       Det_ReportError(
+      0 //TBD: IdModule
+   ,  0 //TBD: IdInstance
+   ,  0 //TBD: IdApi
+   ,  0 //TBD: IdError
       );
 #endif
    }
@@ -92,6 +112,10 @@ FUNC(void, EA_CODE) module_Ea::InitFunction(
       if(NULL_PTR == lptrCfgModule){
 #if(STD_ON == Ea_DevErrorDetect)
          Det_ReportError(
+      0 //TBD: IdModule
+   ,  0 //TBD: IdInstance
+   ,  0 //TBD: IdApi
+   ,  0 //TBD: IdError
          );
 #endif
       }
@@ -116,6 +140,10 @@ FUNC(void, EA_CODE) module_Ea::DeInitFunction(void){
    if(E_OK != IsInitDone){
 #if(STD_ON == Ea_DevErrorDetect)
       Det_ReportError(
+      0 //TBD: IdModule
+   ,  0 //TBD: IdInstance
+   ,  0 //TBD: IdApi
+   ,  0 //TBD: IdError
       );
 #endif
    }
@@ -132,6 +160,10 @@ FUNC(void, EA_CODE) module_Ea::MainFunction(void){
    if(E_OK != IsInitDone){
 #if(STD_ON == Ea_DevErrorDetect)
       Det_ReportError(
+      0 //TBD: IdModule
+   ,  0 //TBD: IdInstance
+   ,  0 //TBD: IdApi
+   ,  0 //TBD: IdError
       );
 #endif
    }
@@ -142,49 +174,34 @@ FUNC(void, EA_CODE) module_Ea::MainFunction(void){
 #endif
 }
 
-class class_Ea_Unused{
-   public:
-      FUNC(void, EA_CODE) SetMode                (void);
-      FUNC(void, EA_CODE) Read                   (void);
-      FUNC(void, EA_CODE) Write                  (void);
-      FUNC(void, EA_CODE) Cancel                 (void);
-      FUNC(void, EA_CODE) GetStatus              (void);
-      FUNC(void, EA_CODE) GetJobResult           (void);
-      FUNC(void, EA_CODE) InvalidateBlock        (void);
-      FUNC(void, EA_CODE) GetVersionInfo         (void);
-      FUNC(void, EA_CODE) EraseImmediateBlock    (void);
-      FUNC(void, EA_CODE) CbJobEndNotification   (void);
-      FUNC(void, EA_CODE) CbJobErrorNotification (void);
-};
-
-FUNC(void, EA_CODE) class_Ea_Unused::SetMode(void){
+FUNC(void, EA_CODE) class_Ea_Functionality::SetMode(void){
 }
 
-FUNC(void, EA_CODE) class_Ea_Unused::Read(void){
+FUNC(void, EA_CODE) class_Ea_Functionality::Read(void){
 }
 
-FUNC(void, EA_CODE) class_Ea_Unused::Write(void){
+FUNC(void, EA_CODE) class_Ea_Functionality::Write(void){
 }
 
-FUNC(void, EA_CODE) class_Ea_Unused::Cancel(void){
+FUNC(void, EA_CODE) class_Ea_Functionality::Cancel(void){
 }
 
-FUNC(void, EA_CODE) class_Ea_Unused::GetStatus(void){
+FUNC(void, EA_CODE) class_Ea_Functionality::GetStatus(void){
 }
 
-FUNC(void, EA_CODE) class_Ea_Unused::GetJobResult(void){
+FUNC(void, EA_CODE) class_Ea_Functionality::GetJobResult(void){
 }
 
-FUNC(void, EA_CODE) class_Ea_Unused::InvalidateBlock(void){
+FUNC(void, EA_CODE) class_Ea_Functionality::InvalidateBlock(void){
 }
 
-FUNC(void, EA_CODE) class_Ea_Unused::EraseImmediateBlock(void){
+FUNC(void, EA_CODE) class_Ea_Functionality::EraseImmediateBlock(void){
 }
 
-FUNC(void, EA_CODE) class_Ea_Unused::CbJobEndNotification(void){
+FUNC(void, EA_CODE) class_Ea_Functionality::CbJobEndNotification(void){
 }
 
-FUNC(void, EA_CODE) class_Ea_Unused::CbJobErrorNotification(void){
+FUNC(void, EA_CODE) class_Ea_Functionality::CbJobErrorNotification(void){
 }
 
 /******************************************************************************/
