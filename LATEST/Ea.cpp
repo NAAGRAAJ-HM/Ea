@@ -7,6 +7,7 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "Module.hpp"
+#include "Ea_core.hpp"
 #include "infEa_EcuM.hpp"
 #include "infEa_Dcm.hpp"
 #include "infEa_SchM.hpp"
