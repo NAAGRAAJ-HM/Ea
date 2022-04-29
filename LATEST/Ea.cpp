@@ -7,10 +7,9 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "Module.hpp"
+#include "CfgEa.hpp"
 #include "Ea_core.hpp"
-#include "infEa_EcuM.hpp"
-#include "infEa_Dcm.hpp"
-#include "infEa_SchM.hpp"
+#include "infEa.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -44,6 +43,7 @@ class module_Ea:
       );
       FUNC(void, EA_CODE) DeInitFunction (void);
       FUNC(void, EA_CODE) MainFunction   (void);
+      EA_CORE_FUNCTIONALITIES
 };
 
 extern VAR(module_Ea, EA_VAR) Ea;
@@ -58,7 +58,6 @@ CONSTP2VAR(infSchMClient, EA_VAR, EA_CONST) gptrinfSchMClient_Ea = &Ea;
 /******************************************************************************/
 /* PARAMS                                                                     */
 /******************************************************************************/
-#include "CfgEa.hpp"
 
 /******************************************************************************/
 /* OBJECTS                                                                    */
