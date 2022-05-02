@@ -20,7 +20,6 @@
               FUNC(void, EA_CODE) GetStatus              (void);               \
               FUNC(void, EA_CODE) GetJobResult           (void);               \
               FUNC(void, EA_CODE) InvalidateBlock        (void);               \
-              FUNC(void, EA_CODE) GetVersionInfo         (void);               \
               FUNC(void, EA_CODE) EraseImmediateBlock    (void);               \
               FUNC(void, EA_CODE) CbJobEndNotification   (void);               \
               FUNC(void, EA_CODE) CbJobErrorNotification (void);               \
@@ -33,7 +32,6 @@
       virtual FUNC(void, EA_CODE) GetStatus              (void) = 0;           \
       virtual FUNC(void, EA_CODE) GetJobResult           (void) = 0;           \
       virtual FUNC(void, EA_CODE) InvalidateBlock        (void) = 0;           \
-      virtual FUNC(void, EA_CODE) GetVersionInfo         (void) = 0;           \
       virtual FUNC(void, EA_CODE) EraseImmediateBlock    (void) = 0;           \
       virtual FUNC(void, EA_CODE) CbJobEndNotification   (void) = 0;           \
       virtual FUNC(void, EA_CODE) CbJobErrorNotification (void) = 0;           \

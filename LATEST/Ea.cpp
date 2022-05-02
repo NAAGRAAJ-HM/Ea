@@ -159,34 +159,34 @@ FUNC(void, EA_CODE) module_Ea::MainFunction(void){
 #endif
 }
 
-FUNC(void, EA_CODE) class_Ea_Functionality::SetMode(void){
+FUNC(void, EA_CODE) module_Ea::SetMode(void){
 }
 
-FUNC(void, EA_CODE) class_Ea_Functionality::Read(void){
+FUNC(void, EA_CODE) module_Ea::Read(void){
 }
 
-FUNC(void, EA_CODE) class_Ea_Functionality::Write(void){
+FUNC(void, EA_CODE) module_Ea::Write(void){
 }
 
-FUNC(void, EA_CODE) class_Ea_Functionality::Cancel(void){
+FUNC(void, EA_CODE) module_Ea::Cancel(void){
 }
 
-FUNC(void, EA_CODE) class_Ea_Functionality::GetStatus(void){
+FUNC(void, EA_CODE) module_Ea::GetStatus(void){
 }
 
-FUNC(void, EA_CODE) class_Ea_Functionality::GetJobResult(void){
+FUNC(void, EA_CODE) module_Ea::GetJobResult(void){
 }
 
-FUNC(void, EA_CODE) class_Ea_Functionality::InvalidateBlock(void){
+FUNC(void, EA_CODE) module_Ea::InvalidateBlock(void){
 }
 
-FUNC(void, EA_CODE) class_Ea_Functionality::EraseImmediateBlock(void){
+FUNC(void, EA_CODE) module_Ea::EraseImmediateBlock(void){
 }
 
-FUNC(void, EA_CODE) class_Ea_Functionality::CbJobEndNotification(void){
+FUNC(void, EA_CODE) module_Ea::CbJobEndNotification(void){
 }
 
-FUNC(void, EA_CODE) class_Ea_Functionality::CbJobErrorNotification(void){
+FUNC(void, EA_CODE) module_Ea::CbJobErrorNotification(void){
 }
 
 /******************************************************************************/
