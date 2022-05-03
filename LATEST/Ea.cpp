@@ -82,79 +82,79 @@ FUNC(void, EA_CODE) module_Ea::InitFunction(
    CONSTP2CONST(CfgModule_TypeAbstract, EA_CONFIG_DATA, EA_APPL_CONST) lptrCfgModule
 ){
 #if(STD_ON == Ea_InitCheck)
-   if(E_OK == IsInitDone){
-#if(STD_ON == Ea_DevErrorDetect)
-      Det_ReportError(
-      0 //TBD: IdModule
-   ,  0 //TBD: IdInstance
-   ,  0 //TBD: IdApi
-   ,  0 //TBD: IdError
-      );
+   if(E_OK != IsInitDone){
 #endif
-   }
-   else{
-#endif
-      if(NULL_PTR == lptrCfgModule){
-#if(STD_ON == Ea_DevErrorDetect)
-         Det_ReportError(
-      0 //TBD: IdModule
-   ,  0 //TBD: IdInstance
-   ,  0 //TBD: IdApi
-   ,  0 //TBD: IdError
-         );
-#endif
-      }
-      else{
+      if(NULL_PTR != lptrCfgModule){
          if(STD_LOW){
-// check lptrCfgModule for memory faults
+            // check lptrCfgModule for memory faults
             lptrCfg = lptrCfgModule;
          }
          else{
-// use PBcfg_CanIf as back-up configuration
+            // use PBcfg_CanIf as back-up configuration
             lptrCfg = &PBcfgEa;
          }
       }
-      IsInitDone = E_OK;
+      else{
+#if(STD_ON == Ea_DevErrorDetect)
+         Det_ReportError(
+               0 //TBD: IdModule
+            ,  0 //TBD: IdInstance
+            ,  0 //TBD: IdApi
+            ,  0 //TBD: IdError
+         );
+#endif
+      }
 #if(STD_ON == Ea_InitCheck)
+      IsInitDone = E_OK;
+   }
+   else{
+#if(STD_ON == Ea_DevErrorDetect)
+      Det_ReportError(
+            0 //TBD: IdModule
+         ,  0 //TBD: IdInstance
+         ,  0 //TBD: IdApi
+         ,  0 //TBD: IdError
+      );
+#endif
    }
 #endif
 }
 
 FUNC(void, EA_CODE) module_Ea::DeInitFunction(void){
 #if(STD_ON == Ea_InitCheck)
-   if(E_OK != IsInitDone){
-#if(STD_ON == Ea_DevErrorDetect)
-      Det_ReportError(
-      0 //TBD: IdModule
-   ,  0 //TBD: IdInstance
-   ,  0 //TBD: IdApi
-   ,  0 //TBD: IdError
-      );
+   if(E_OK == IsInitDone){
 #endif
+#if(STD_ON == Ea_InitCheck)
+      IsInitDone = E_NOT_OK;
    }
    else{
+#if(STD_ON == Ea_DevErrorDetect)
+      Det_ReportError(
+            0 //TBD: IdModule
+         ,  0 //TBD: IdInstance
+         ,  0 //TBD: IdApi
+         ,  0 //TBD: IdError
+      );
 #endif
-      IsInitDone = E_NOT_OK;
-#if(STD_ON == Ea_InitCheck)
    }
 #endif
 }
 
 FUNC(void, EA_CODE) module_Ea::MainFunction(void){
 #if(STD_ON == Ea_InitCheck)
-   if(E_OK != IsInitDone){
-#if(STD_ON == Ea_DevErrorDetect)
-      Det_ReportError(
-      0 //TBD: IdModule
-   ,  0 //TBD: IdInstance
-   ,  0 //TBD: IdApi
-   ,  0 //TBD: IdError
-      );
-#endif
-   }
-   else{
+   if(E_OK == IsInitDone){
 #endif
 #if(STD_ON == Ea_InitCheck)
+   }
+   else{
+#if(STD_ON == Ea_DevErrorDetect)
+      Det_ReportError(
+            0 //TBD: IdModule
+         ,  0 //TBD: IdInstance
+         ,  0 //TBD: IdApi
+         ,  0 //TBD: IdError
+      );
+#endif
    }
 #endif
 }
