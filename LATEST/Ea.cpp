@@ -113,7 +113,7 @@ FUNC(void, EA_CODE) module_Ea::InitFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  0 //TBD: IdError
+         ,  EA_E_UNINIT
       );
 #endif
    }
@@ -133,7 +133,7 @@ FUNC(void, EA_CODE) module_Ea::DeInitFunction(void){
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  0 //TBD: IdError
+         ,  EA_E_UNINIT
       );
 #endif
    }
@@ -152,7 +152,7 @@ FUNC(void, EA_CODE) module_Ea::MainFunction(void){
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  0 //TBD: IdError
+         ,  EA_E_UNINIT
       );
 #endif
    }
