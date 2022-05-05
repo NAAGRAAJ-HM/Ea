@@ -85,12 +85,10 @@ FUNC(void, EA_CODE) module_Ea::InitFunction(
    if(E_OK != IsInitDone){
 #endif
       if(NULL_PTR != lptrCfgModule){
-         if(STD_LOW){
-            // check lptrCfgModule for memory faults
+         if(STD_HIGH){
             lptrCfg = lptrCfgModule;
          }
          else{
-            // use PBcfg_CanIf as back-up configuration
             lptrCfg = &PBcfgEa;
          }
       }
