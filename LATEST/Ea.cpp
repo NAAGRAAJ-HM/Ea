@@ -89,7 +89,10 @@ FUNC(void, EA_CODE) module_Ea::InitFunction(
    CONSTP2CONST(CfgModule_TypeAbstract, EA_CONFIG_DATA, EA_APPL_CONST) lptrCfgModule
 ){
 #if(STD_ON == Ea_InitCheck)
-   if(E_OK != IsInitDone){
+   if(
+         E_OK
+      != IsInitDone
+   ){
 #endif
       if(NULL_PTR != lptrCfgModule){
          if(STD_HIGH){
@@ -127,7 +130,10 @@ FUNC(void, EA_CODE) module_Ea::InitFunction(
 
 FUNC(void, EA_CODE) module_Ea::DeInitFunction(void){
 #if(STD_ON == Ea_InitCheck)
-   if(E_OK == IsInitDone){
+   if(
+         E_OK
+      == IsInitDone
+   ){
 #endif
 #if(STD_ON == Ea_InitCheck)
       IsInitDone = E_NOT_OK;
@@ -147,7 +153,10 @@ FUNC(void, EA_CODE) module_Ea::DeInitFunction(void){
 
 FUNC(void, EA_CODE) module_Ea::MainFunction(void){
 #if(STD_ON == Ea_InitCheck)
-   if(E_OK == IsInitDone){
+   if(
+         E_OK
+      == IsInitDone
+   ){
 #endif
 #if(STD_ON == Ea_InitCheck)
    }
