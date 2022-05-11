@@ -9,7 +9,7 @@
 #include "Module.hpp"
 #include "CfgEa.hpp"
 #include "Ea_core.hpp"
-#include "infEa.hpp"
+#include "infEa_Exp.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -32,6 +32,7 @@
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
 class module_Ea:
+   INTERFACES_EXPORTED_EA
       public abstract_module
    ,  public class_Ea_Functionality
 {
