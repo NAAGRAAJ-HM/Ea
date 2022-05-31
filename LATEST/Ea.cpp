@@ -32,7 +32,7 @@
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
 class module_Ea:
-   INTERFACES_EXPORTED_EA
+      INTERFACES_EXPORTED_EA
       public abstract_module
    ,  public class_Ea_Functionality
 {
