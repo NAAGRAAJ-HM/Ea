@@ -10,6 +10,7 @@
 #include "CfgEa.hpp"
 #include "Ea_core.hpp"
 #include "infEa_Exp.hpp"
+#include "infEa_Imp.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
