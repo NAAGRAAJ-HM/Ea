@@ -74,10 +74,10 @@ CONSTP2VAR(infSchMClient, EA_VAR, EA_CONST) gptrinfSchMClient_Ea = &Ea;
 VAR(module_Ea, EA_VAR) Ea(
    {
 #if(STD_ON == _ReSIM)
-   char strModuleName[6] = "EA";
+         "Ea"
 #else
 #endif
-         EA_AR_RELEASE_VERSION_MAJOR
+      ,  EA_AR_RELEASE_VERSION_MAJOR
       ,  EA_AR_RELEASE_VERSION_MINOR
       ,  0x00
       ,  0xFF
