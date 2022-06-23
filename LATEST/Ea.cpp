@@ -130,7 +130,9 @@ FUNC(void, EA_CODE) module_Ea::InitFunction(
 #endif
 }
 
-FUNC(void, EA_CODE) module_Ea::DeInitFunction(void){
+FUNC(void, EA_CODE) module_Ea::DeInitFunction(
+   void
+){
 #if(STD_ON == Ea_InitCheck)
    if(
          E_OK
@@ -153,7 +155,9 @@ FUNC(void, EA_CODE) module_Ea::DeInitFunction(void){
 #endif
 }
 
-FUNC(void, EA_CODE) module_Ea::MainFunction(void){
+FUNC(void, EA_CODE) module_Ea::MainFunction(
+   void
+){
 #if(STD_ON == Ea_InitCheck)
    if(
          E_OK
@@ -175,34 +179,54 @@ FUNC(void, EA_CODE) module_Ea::MainFunction(void){
 #endif
 }
 
-FUNC(void, EA_CODE) module_Ea::SetMode(void){
+FUNC(void, EA_CODE) module_Ea::SetMode(
+   void
+){
 }
 
-FUNC(void, EA_CODE) module_Ea::Read(void){
+FUNC(void, EA_CODE) module_Ea::Read(
+   void
+){
 }
 
-FUNC(void, EA_CODE) module_Ea::Write(void){
+FUNC(void, EA_CODE) module_Ea::Write(
+   void
+){
 }
 
-FUNC(void, EA_CODE) module_Ea::Cancel(void){
+FUNC(void, EA_CODE) module_Ea::Cancel(
+   void
+){
 }
 
-FUNC(void, EA_CODE) module_Ea::GetStatus(void){
+FUNC(void, EA_CODE) module_Ea::GetStatus(
+   void
+){
 }
 
-FUNC(void, EA_CODE) module_Ea::GetJobResult(void){
+FUNC(void, EA_CODE) module_Ea::GetJobResult(
+   void
+){
 }
 
-FUNC(void, EA_CODE) module_Ea::InvalidateBlock(void){
+FUNC(void, EA_CODE) module_Ea::InvalidateBlock(
+   void
+){
 }
 
-FUNC(void, EA_CODE) module_Ea::EraseImmediateBlock(void){
+FUNC(void, EA_CODE) module_Ea::EraseImmediateBlock(
+   void
+){
 }
 
-FUNC(void, EA_CODE) module_Ea::CbJobEndNotification(void){
+FUNC(void, EA_CODE) module_Ea::CbJobEndNotification(
+   void
+){
 }
 
-FUNC(void, EA_CODE) module_Ea::CbJobErrorNotification(void){
+FUNC(void, EA_CODE) module_Ea::CbJobErrorNotification(
+   void
+){
 }
 
 /******************************************************************************/
