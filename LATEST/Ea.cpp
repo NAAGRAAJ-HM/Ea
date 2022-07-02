@@ -82,12 +82,7 @@ FUNC(void, EA_CODE) module_Ea::InitFunction(
    ){
 #endif
       if(NULL_PTR != lptrCfgModule){
-         if(STD_HIGH){
-            lptrCfg = lptrCfgModule;
-         }
-         else{
-            lptrCfg = &PBcfgEa;
-         }
+         lptrCfg = lptrCfgModule;
       }
       else{
 #if(STD_ON == Ea_DevErrorDetect)
