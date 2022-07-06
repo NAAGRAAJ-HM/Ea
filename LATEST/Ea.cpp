@@ -7,9 +7,7 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "Module.hpp"
-#include "CfgEa.hpp"
-#include "Ea_core.hpp"
-#include "infEa_Exp.hpp"
+#include "Ea.hpp"
 #include "infEa_Imp.hpp"
 
 /******************************************************************************/
@@ -32,26 +30,6 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
-class module_Ea:
-      INTERFACES_EXPORTED_EA
-      public abstract_module
-   ,  public class_Ea_Functionality
-{
-   private:
-/******************************************************************************/
-/* OBJECTS                                                                    */
-/******************************************************************************/
-
-   public:
-      FUNC(void, EA_CODE) InitFunction(
-         CONSTP2CONST(CfgModule_TypeAbstract, EA_CONFIG_DATA, EA_APPL_CONST) lptrCfgModule
-      );
-      FUNC(void, EA_CODE) DeInitFunction (void);
-      FUNC(void, EA_CODE) MainFunction   (void);
-      EA_CORE_FUNCTIONALITIES
-};
-
-extern VAR(module_Ea, EA_VAR) Ea;
 
 /******************************************************************************/
 /* CONSTS                                                                     */
