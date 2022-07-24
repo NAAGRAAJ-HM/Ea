@@ -7,6 +7,7 @@
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
+#include "ConstEa.hpp"
 #include "CfgEa.hpp"
 #include "Ea_core.hpp"
 #include "infEa_Exp.hpp"
@@ -31,13 +32,15 @@ class module_Ea:
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
+      const ConstEa_Type* lptrConst = (ConstEa_Type*)NULL_PTR;
 
    public:
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
       FUNC(void, EA_CODE) InitFunction(
-         CONSTP2CONST(CfgModule_TypeAbstract, EA_CONFIG_DATA, EA_APPL_CONST) lptrCfgModule
+            CONSTP2CONST(ConstModule_TypeAbstract, EA_CONST,       EA_APPL_CONST) lptrConstModule
+         ,  CONSTP2CONST(CfgModule_TypeAbstract,   EA_CONFIG_DATA, EA_APPL_CONST) lptrCfgModule
       );
       FUNC(void, EA_CODE) DeInitFunction (void);
       FUNC(void, EA_CODE) MainFunction   (void);

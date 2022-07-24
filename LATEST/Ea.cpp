@@ -48,7 +48,8 @@ VAR(module_Ea, EA_VAR) Ea;
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
 FUNC(void, EA_CODE) module_Ea::InitFunction(
-   CONSTP2CONST(CfgModule_TypeAbstract, EA_CONFIG_DATA, EA_APPL_CONST) lptrCfgModule
+      CONSTP2CONST(ConstModule_TypeAbstract, EA_CONST,       EA_APPL_CONST) lptrConstModule
+   ,  CONSTP2CONST(CfgModule_TypeAbstract,   EA_CONFIG_DATA, EA_APPL_CONST) lptrCfgModule
 ){
 #if(STD_ON == Ea_InitCheck)
    if(
@@ -56,8 +57,12 @@ FUNC(void, EA_CODE) module_Ea::InitFunction(
       != IsInitDone
    ){
 #endif
-      if(NULL_PTR != lptrCfgModule){
-         lptrCfg = lptrCfgModule;
+      if(
+            (NULL_PTR != lptrConstModule)
+         && (NULL_PTR != lptrCfgModule)
+      ){
+         lptrConst = lptrConstModule;
+         lptrCfg   = lptrCfgModule;
       }
       else{
 #if(STD_ON == Ea_DevErrorDetect)
