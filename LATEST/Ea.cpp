@@ -61,7 +61,7 @@ FUNC(void, EA_CODE) module_Ea::InitFunction(
             (NULL_PTR != lptrConstModule)
          && (NULL_PTR != lptrCfgModule)
       ){
-         lptrConst = lptrConstModule;
+         lptrConst = (const ConstEa_Type*)lptrConstModule;
          lptrCfg   = lptrCfgModule;
       }
       else{
