@@ -12,29 +12,29 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define EA_CORE_FUNCTIONALITIES                                                \
-              FUNC(void, EA_CODE) SetMode                (void);               \
-              FUNC(void, EA_CODE) Read                   (void);               \
-              FUNC(void, EA_CODE) Write                  (void);               \
-              FUNC(void, EA_CODE) McalCancel                 (void);               \
-              FUNC(void, EA_CODE) GetStatus              (void);               \
-              FUNC(void, EA_CODE) GetJobResult           (void);               \
-              FUNC(void, EA_CODE) InvalidateBlock        (void);               \
-              FUNC(void, EA_CODE) EraseImmediateBlock    (void);               \
-              FUNC(void, EA_CODE) CbJobEndNotification   (void);               \
-              FUNC(void, EA_CODE) CbJobErrorNotification (void);               \
+#define ECUABEA_CORE_FUNCTIONALITIES                                                \
+              FUNC(void, ECUABEA_CODE) SetMode                (void);               \
+              FUNC(void, ECUABEA_CODE) Read                   (void);               \
+              FUNC(void, ECUABEA_CODE) Write                  (void);               \
+              FUNC(void, ECUABEA_CODE) McalCancel                 (void);               \
+              FUNC(void, ECUABEA_CODE) GetStatus              (void);               \
+              FUNC(void, ECUABEA_CODE) GetJobResult           (void);               \
+              FUNC(void, ECUABEA_CODE) InvalidateBlock        (void);               \
+              FUNC(void, ECUABEA_CODE) EraseImmediateBlock    (void);               \
+              FUNC(void, ECUABEA_CODE) CbJobEndNotification   (void);               \
+              FUNC(void, ECUABEA_CODE) CbJobErrorNotification (void);               \
 
-#define EA_CORE_FUNCTIONALITIES_VIRTUAL                                        \
-      virtual FUNC(void, EA_CODE) SetMode                (void) = 0;           \
-      virtual FUNC(void, EA_CODE) Read                   (void) = 0;           \
-      virtual FUNC(void, EA_CODE) Write                  (void) = 0;           \
-      virtual FUNC(void, EA_CODE) McalCancel                 (void) = 0;           \
-      virtual FUNC(void, EA_CODE) GetStatus              (void) = 0;           \
-      virtual FUNC(void, EA_CODE) GetJobResult           (void) = 0;           \
-      virtual FUNC(void, EA_CODE) InvalidateBlock        (void) = 0;           \
-      virtual FUNC(void, EA_CODE) EraseImmediateBlock    (void) = 0;           \
-      virtual FUNC(void, EA_CODE) CbJobEndNotification   (void) = 0;           \
-      virtual FUNC(void, EA_CODE) CbJobErrorNotification (void) = 0;           \
+#define ECUABEA_CORE_FUNCTIONALITIES_VIRTUAL                                        \
+      virtual FUNC(void, ECUABEA_CODE) SetMode                (void) = 0;           \
+      virtual FUNC(void, ECUABEA_CODE) Read                   (void) = 0;           \
+      virtual FUNC(void, ECUABEA_CODE) Write                  (void) = 0;           \
+      virtual FUNC(void, ECUABEA_CODE) McalCancel                 (void) = 0;           \
+      virtual FUNC(void, ECUABEA_CODE) GetStatus              (void) = 0;           \
+      virtual FUNC(void, ECUABEA_CODE) GetJobResult           (void) = 0;           \
+      virtual FUNC(void, ECUABEA_CODE) InvalidateBlock        (void) = 0;           \
+      virtual FUNC(void, ECUABEA_CODE) EraseImmediateBlock    (void) = 0;           \
+      virtual FUNC(void, ECUABEA_CODE) CbJobEndNotification   (void) = 0;           \
+      virtual FUNC(void, ECUABEA_CODE) CbJobErrorNotification (void) = 0;           \
 
 /******************************************************************************/
 /* MACROS                                                                     */
@@ -45,7 +45,7 @@
 /******************************************************************************/
 class class_EcuabEa_Functionality{
    public:
-      EA_CORE_FUNCTIONALITIES_VIRTUAL
+      ECUABEA_CORE_FUNCTIONALITIES_VIRTUAL
 };
 
 /******************************************************************************/

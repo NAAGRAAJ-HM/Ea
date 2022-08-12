@@ -13,18 +13,18 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define EA_AR_RELEASE_VERSION_MAJOR                                            4
-#define EA_AR_RELEASE_VERSION_MINOR                                            3
+#define ECUABEA_AR_RELEASE_VERSION_MAJOR                                            4
+#define ECUABEA_AR_RELEASE_VERSION_MINOR                                            3
 
 /******************************************************************************/
 /* MACROS                                                                     */
 /******************************************************************************/
-#if(EA_AR_RELEASE_VERSION_MAJOR != STD_AR_RELEASE_VERSION_MAJOR)
-   #error "Incompatible EA_AR_RELEASE_VERSION_MAJOR!"
+#if(ECUABEA_AR_RELEASE_VERSION_MAJOR != STD_AR_RELEASE_VERSION_MAJOR)
+   #error "Incompatible ECUABEA_AR_RELEASE_VERSION_MAJOR!"
 #endif
 
-#if(EA_AR_RELEASE_VERSION_MINOR != STD_AR_RELEASE_VERSION_MINOR)
-   #error "Incompatible EA_AR_RELEASE_VERSION_MINOR!"
+#if(ECUABEA_AR_RELEASE_VERSION_MINOR != STD_AR_RELEASE_VERSION_MINOR)
+   #error "Incompatible ECUABEA_AR_RELEASE_VERSION_MINOR!"
 #endif
 
 /******************************************************************************/
@@ -42,14 +42,14 @@
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-VAR(module_EcuabEa, EA_VAR) EcuabEa;
+VAR(module_EcuabEa, ECUABEA_VAR) EcuabEa;
 
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
-FUNC(void, EA_CODE) module_EcuabEa::InitFunction(
-      CONSTP2CONST(ConstModule_TypeAbstract, EA_CONST,       EA_APPL_CONST) lptrConstModule
-   ,  CONSTP2CONST(CfgModule_TypeAbstract,   EA_CONFIG_DATA, EA_APPL_CONST) lptrCfgModule
+FUNC(void, ECUABEA_CODE) module_EcuabEa::InitFunction(
+      CONSTP2CONST(ConstModule_TypeAbstract, ECUABEA_CONST,       ECUABEA_APPL_CONST) lptrConstModule
+   ,  CONSTP2CONST(CfgModule_TypeAbstract,   ECUABEA_CONFIG_DATA, ECUABEA_APPL_CONST) lptrCfgModule
 ){
 #if(STD_ON == EcuabEa_InitCheck)
    if(
@@ -83,14 +83,14 @@ FUNC(void, EA_CODE) module_EcuabEa::InitFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  EA_E_UNINIT
+         ,  ECUABEA_E_UNINIT
       );
 #endif
    }
 #endif
 }
 
-FUNC(void, EA_CODE) module_EcuabEa::DeInitFunction(
+FUNC(void, ECUABEA_CODE) module_EcuabEa::DeInitFunction(
    void
 ){
 #if(STD_ON == EcuabEa_InitCheck)
@@ -108,14 +108,14 @@ FUNC(void, EA_CODE) module_EcuabEa::DeInitFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  EA_E_UNINIT
+         ,  ECUABEA_E_UNINIT
       );
 #endif
    }
 #endif
 }
 
-FUNC(void, EA_CODE) module_EcuabEa::MainFunction(
+FUNC(void, ECUABEA_CODE) module_EcuabEa::MainFunction(
    void
 ){
 #if(STD_ON == EcuabEa_InitCheck)
@@ -132,59 +132,59 @@ FUNC(void, EA_CODE) module_EcuabEa::MainFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  EA_E_UNINIT
+         ,  ECUABEA_E_UNINIT
       );
 #endif
    }
 #endif
 }
 
-FUNC(void, EA_CODE) module_EcuabEa::SetMode(
+FUNC(void, ECUABEA_CODE) module_EcuabEa::SetMode(
    void
 ){
 }
 
-FUNC(void, EA_CODE) module_EcuabEa::Read(
+FUNC(void, ECUABEA_CODE) module_EcuabEa::Read(
    void
 ){
 }
 
-FUNC(void, EA_CODE) module_EcuabEa::Write(
+FUNC(void, ECUABEA_CODE) module_EcuabEa::Write(
    void
 ){
 }
 
-FUNC(void, EA_CODE) module_EcuabEa::McalCancel(
+FUNC(void, ECUABEA_CODE) module_EcuabEa::McalCancel(
    void
 ){
 }
 
-FUNC(void, EA_CODE) module_EcuabEa::GetStatus(
+FUNC(void, ECUABEA_CODE) module_EcuabEa::GetStatus(
    void
 ){
 }
 
-FUNC(void, EA_CODE) module_EcuabEa::GetJobResult(
+FUNC(void, ECUABEA_CODE) module_EcuabEa::GetJobResult(
    void
 ){
 }
 
-FUNC(void, EA_CODE) module_EcuabEa::InvalidateBlock(
+FUNC(void, ECUABEA_CODE) module_EcuabEa::InvalidateBlock(
    void
 ){
 }
 
-FUNC(void, EA_CODE) module_EcuabEa::EraseImmediateBlock(
+FUNC(void, ECUABEA_CODE) module_EcuabEa::EraseImmediateBlock(
    void
 ){
 }
 
-FUNC(void, EA_CODE) module_EcuabEa::CbJobEndNotification(
+FUNC(void, ECUABEA_CODE) module_EcuabEa::CbJobEndNotification(
    void
 ){
 }
 
-FUNC(void, EA_CODE) module_EcuabEa::CbJobErrorNotification(
+FUNC(void, ECUABEA_CODE) module_EcuabEa::CbJobErrorNotification(
    void
 ){
 }
