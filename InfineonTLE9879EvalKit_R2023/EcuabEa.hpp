@@ -1,13 +1,13 @@
 #pragma once
 /******************************************************************************/
-/* File   : EcuabEa.hpp                                                            */
+/* File   : EcuabEa.hpp                                                       */
 /* Author : NAGARAJA HM (c) since 1982. All rights reserved.                  */
 /******************************************************************************/
 
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
-#include "ConstEcuabEa.hpp"
+#include "infEcuabEa_ServiceNvM_Types.hpp"
 #include "CfgEcuabEa.hpp"
 #include "EcuabEa_core.hpp"
 #include "infEcuabEa_Exp.hpp"
